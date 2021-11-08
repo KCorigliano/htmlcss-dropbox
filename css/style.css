@@ -16,7 +16,8 @@ body{
 
 header{
     background-color: #add1ea;
-    margin-bottom: 100px;
+    height: 700px;
+    margin-bottom: 200px;
     font-size: 12px;
 }
 
@@ -35,13 +36,20 @@ nav{
 }
 
 .jumbotron{
-    width: 1000px;
-    margin: 50px auto;
+    width: 1300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container{
     width: 1000px;
     margin: 0 auto;
+}
+
+.relative{
+    position: relative;
 }
 
 .fl{
@@ -50,18 +58,6 @@ nav{
 
 .fr{
     float: right;
-}
-
-.far{
-    font-size: 12px;
-    color: black;
-    margin-right: 5px;
-}
-
-.fas{
-    font-size: 12px;
-    color: black;
-    margin-right: 5px;
 }
 
 .button{
@@ -82,15 +78,7 @@ nav{
 
 h1{
     margin-bottom: 25px;
-    font-size: 58px;
-}
-
-h2{
-    margin-bottom: 15px;
-}
-
-h3{
-    margin-bottom: 15px;
+    font-size: 68px;
 }
 
 a{
@@ -106,6 +94,14 @@ section{
     width: 50px;
     border-top: #ccc 1px solid;
     margin: 25px 0 50px 0;
+}
+
+.m-b30px{
+    margin-bottom: 30px;
+}
+
+.m-b15px{
+    margin-bottom: 15px;
 }
 
 /*---------------------------------------*/
@@ -130,21 +126,16 @@ nav{
 
 .jumbo-text{
     width: 30%;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .jumbo-img img{
-    width: 650px;
-    margin-bottom: -50px;
+    width: 750px;
+    margin-bottom: -200px;
 }
 
 .jumbo-img{
     width: 65%;
-}
-
-.jumbotron p:first-child{
-    margin-bottom: 15px;
-    line-height: 17px;
 }
 
 .jumbotron .button{
@@ -156,6 +147,8 @@ nav{
     font-size: 30px;
     color: #000;
 }
+
+/*--------------- / header -------------*/
 
 input{
     vertical-align: middle;
@@ -171,59 +164,114 @@ input#annuale{
     margin-left: 15px;
 }
 
-.row-main{
+.col-main{
     padding: 30px;
     font-size: 12px;
 }
 
-.row-main p{
-    margin-top: 15px;
-}
-
-.row-main p a{
+.col-main p a{
     color: blue;
     text-decoration: underline;
 }
 
-.row-title{
+.col-title{
     border-bottom: #ccc 1px solid;
     text-align: center;
+    font-size: 12px;
 }
 
-.row-title p{
+.col-title p{
     margin: 5px 0;
 }
 
-.side{
+.col-side{
     height: 850px;
     width: 31%;
     border: #ccc 1px solid;
 }
 
-.mittle{
+.user-title::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: '\f007';
+    margin-right: 3px
+}
+
+.building::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f1ad";
+    margin-right: 3px;
+}
+
+.col-mittle{
     height: 850px;
     width: 32%;
     margin: 0 30px;
     border: #ccc 1px solid;
 }
 
-.row-side{
+.col-side{
     font-size: 12px;
 }
 
 .price{
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .under-price{
     color: #ccc;
-    margin-bottom: 30px;
 }
 
-.last-icon{
-    height: 30px;
-    margin-right: 3px;
+.features li{
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.user::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f007";
+    position: absolute;
+    top: 3px;
+    left: -3px; 
+}
+
+.user-plus::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f234";
+    position: absolute;
+    top: 3px;
+    left: -3px;
+}
+
+.pen::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f303";
+    position: absolute;
+    top: 3px;
+    left: -3px;
+}
+
+.smile::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f118";
+    position: absolute;
+    top: 3px;
+    left: -3px;
+}
+
+.folder::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f07b";
+    position: absolute;
+    top: 3px;
+    left: -3px;
 }
 
 .button a{
@@ -234,17 +282,23 @@ ul{
     list-style: none;
 }
 
-main li{
-    margin-bottom: 30px;
+.summary li{ 
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 15px;
 }
 
-.fa-check{
-    height: 30px;
+.summary li::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
     color: blue;
-    margin-right: 3px;
+    position: absolute;
+    top: 3px;
+    left: 0;
 }
 
-.big-row{
+.big-col{
     margin: 30px auto;
     border: #ccc 1px solid;
 }
@@ -254,6 +308,8 @@ main li{
     text-align: center;
     margin-bottom: 15px;
 }
+
+/*--------------- / colonne -------------*/
 
 .img{
     width: 60%;
@@ -278,6 +334,8 @@ main li{
 .white a{
     color: black
 }
+
+/*--------------- / big-img section -------------*/
 
 .six-img-grid .fl{
     width: 32%;
@@ -311,10 +369,18 @@ main li{
     margin-bottom: 50px;
 }
 
-.fl .square{
+/*--------------- / six-img grid -------------*/
+
+#normal{
+    color: blue;
+    text-decoration: underline;
+}
+
+.square{
     width: 50%;
     height: 190px;
     position: relative;
+    color: white;
 }
 
 .side-grid img{
@@ -326,9 +392,9 @@ main li{
     transform: translate(-50%, 50%);
 }
 
-.lightgreen{
-    background-color: #caeacb;
-    padding: 5px;
+.green{
+    background-color: #94d595;
+    border: #caeacb 15px solid;
 }
 
 .darkred{
@@ -373,6 +439,8 @@ main li{
     border: 1px white solid;
 }
 
+/*--------------- / logo grid -------------*/
+
 .ask{
     height: 50px;
     border-bottom: #ccc 1px solid;
@@ -383,6 +451,8 @@ main li{
     border-bottom: #ccc 1px solid;
     line-height: 75px;
 }
+
+/*--------------- / frequently ask -------------*/
 
 footer .ul{
     list-style: none;
@@ -403,12 +473,24 @@ footer .break-line{
     margin: 100px 0 50px;
 }
 
-footer .fas{
-    color: #ccc;
-    font-size: 12px;
-    line-height: 20px;
-}
-
 .language{
     font-size: 12px;
+    color: #ccc;
+}
+
+.language::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0ac";
+    margin-right: 5px;
+    color: #ccc;
+}
+
+.language::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0de";
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #ccc;
 }
